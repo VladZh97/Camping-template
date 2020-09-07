@@ -1,2 +1,2 @@
 # Camping-langing page
- Template for camping reservation. Nice project to practice styling skills.
+ Template for camping reservation. Nice project for practice styling skills.
