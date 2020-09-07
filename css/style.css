@@ -119,6 +119,11 @@ a {
   line-height: 50px;
 }
 
+.card {
+  margin-bottom: 0;
+  margin-top: -156px;
+}
+
 .card__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,8 +140,6 @@ a {
   height: 312px;
   border-radius: 20px;
   background-color: #fff;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   margin: 0 auto 20px auto;
 }
 
@@ -162,25 +165,25 @@ a {
 }
 
 .place {
-  margin-top: -100px;
+  margin-top: 100px;
   text-align: center;
+  overflow: hidden;
   position: relative;
-  overflow-x: hidden;
 }
 
 .place::after {
   content: url("../image/place-shape.png");
   position: absolute;
-  top: -150px;
-  left: 0;
+  bottom: 50px;
+  left: -70px;
   z-index: -1;
 }
 
 .place::before {
   content: url("../image/place-shape2.png");
   position: absolute;
-  top: 60%;
-  left: -50px;
+  top: 0;
+  right: -50px;
   z-index: -1;
 }
 
@@ -201,6 +204,7 @@ a {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow-x: hidden;
 }
 
 .place__inner {
@@ -260,9 +264,8 @@ a {
 }
 
 .place__img-icon .fas {
-  display: none;
-  -webkit-transform: translateY(-33px);
-          transform: translateY(-33px);
+  -webkit-transform: translateY(-39px);
+          transform: translateY(-39px);
 }
 
 .place__card-title {
@@ -309,6 +312,7 @@ a {
   height: 50px;
   line-height: 50px;
   border-radius: 30px;
+  margin-top: 40px;
 }
 
 .contact {
