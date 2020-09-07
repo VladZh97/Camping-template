@@ -396,10 +396,10 @@ a {
       .fas {
         opacity: 0;
         transform: translateY(-39px);
-        transition: all .2s ease-in-out;
+        transition: all .4s ease-in-out;
       }
 
-      .fas.like {
+      .fas:hover {
         opacity: 1;
       }
     }
@@ -464,7 +464,6 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     overflow-x: hidden;
-    width: 85%;
     margin: 0 auto;
   }
 

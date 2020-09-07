@@ -397,11 +397,11 @@ a {
   opacity: 0;
   -webkit-transform: translateY(-39px);
           transform: translateY(-39px);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
-.place__img-icon .fas.like {
+.place__img-icon .fas:hover {
   opacity: 1;
 }
 
@@ -463,7 +463,6 @@ a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     overflow-x: hidden;
-    width: 85%;
     margin: 0 auto;
   }
 }
