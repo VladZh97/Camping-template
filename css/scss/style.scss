@@ -185,7 +185,7 @@ a {
           border-radius: 10px;
           z-index: -1;
           opacity: 0;
-          transition: all .3s ease;
+          transition: all .4s ease-in-out;
         }
       }
 
@@ -226,6 +226,12 @@ a {
           line-height: 40px;
           border-radius: 15px;
           opacity: 1;
+          transform: scale(1);
+          transition: all .3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
         }
       }
     }
@@ -450,6 +456,7 @@ a {
     line-height: 50px;
     border-radius: 30px;
     margin-top: 40px;
+    cursor: pointer;
   }
 }
 
@@ -471,6 +478,8 @@ a {
 
 
 }
+
+
 .contact {
   margin-top: 102px;
   background-color: #f8e2dd;
@@ -549,6 +558,7 @@ a {
       width: 50px;
       height: 50px;
       margin-top: 15px;
+      cursor: pointer;
     }
 
     .fa-telegram-plane {
@@ -556,6 +566,37 @@ a {
       line-height: 50px;
       font-size: 40px;
       color: #fff;
+    }
+  }
+}
+
+
+
+@media(min-width: 1024px) {
+  .contact {
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 20px;
+
+    &::before {
+      content: url("../image/contact-bg.png");
+      position: absolute;
+      top: -250px;
+      left: 250px;
+      z-index: -1;
+      transform: scale(1.3);
+    }
+    &__inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 390px;
+    }
+
+
+    &__bottom {
+      order: -1;
+      width: 50%;
     }
   }
 }
@@ -598,6 +639,7 @@ a {
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
+
   }
 
   &__contact {
@@ -662,7 +704,16 @@ a {
     }
 
     &__text {
-      max-width: 90%;
+      max-width: 70%;
+    }
+
+    &__down-title {
+      text-align: center;
+    }
+
+
+    &__app-container {
+      text-align: center;
     }
   }
 }
