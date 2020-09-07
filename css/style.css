@@ -1,5 +1,5 @@
 body {
-  background-color: #FAF4F2;
+  background-color: #faf4f2;
 }
 
 :focus {
@@ -24,7 +24,7 @@ a {
   border-radius: 0 0 97px 97px;
 }
 
-.header__top {
+.header__main {
   padding: 40px 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,15 +55,15 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #E76F51;
+  background-color: #e76f51;
   width: 20px;
   height: 2px;
 }
 
 .header__burger span::before, .header__burger span::after {
-  content: '';
+  content: "";
   position: absolute;
-  background-color: #E76F51;
+  background-color: #e76f51;
   width: 20px;
   height: 2px;
 }
@@ -78,7 +78,7 @@ a {
 
 .header__title {
   margin-top: 200px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   color: #ffffff;
   text-align: center;
@@ -91,7 +91,7 @@ a {
   margin: 20px;
   color: #ffffff;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
@@ -122,17 +122,131 @@ a {
   display: block;
   width: 205px;
   height: 50px;
-  background-color: #E76F51;
+  background-color: #e76f51;
   text-align: center;
   color: #ffffff;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
   margin: 0 auto;
   border-radius: 105px;
   line-height: 50px;
+}
+
+.header__login {
+  display: none;
+}
+
+.header .menu {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header .menu {
+    display: block;
+    min-width: 700px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .header .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .menu__link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  .header .menu__link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    width: 30px;
+    height: 3px;
+    background-color: #e76f51;
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  .header .menu__link:hover::before {
+    opacity: 1;
+  }
+  .header__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__burger {
+    display: none;
+  }
+  .header__login {
+    display: block;
+  }
+  .header__login-btn {
+    display: block;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    width: 100px;
+    margin-top: 8px;
+    text-align: center;
+    opacity: 0;
+  }
+  .header__login-btn:last-child {
+    border: 1px solid #fff;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 15px;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1100px) {
+  .header__login-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 35px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__login-btn {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__top {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
 }
 
 .card {
@@ -165,7 +279,7 @@ a {
 }
 
 .card__title {
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
@@ -173,7 +287,7 @@ a {
 }
 
 .card__text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
@@ -204,7 +318,7 @@ a {
 }
 
 .place__title {
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 40px;
@@ -257,7 +371,7 @@ a {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: #E76F51;
+  color: #e76f51;
   background-color: #fff;
   width: 140px;
   height: 50px;
@@ -275,25 +389,32 @@ a {
   text-align: center;
   line-height: 40px;
   border-radius: 14px;
-  color: #E76F51;
+  color: #e76f51;
   font-size: 23px;
 }
 
 .place__img-icon .fas {
+  opacity: 0;
   -webkit-transform: translateY(-39px);
           transform: translateY(-39px);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.place__img-icon .fas.like {
+  opacity: 1;
 }
 
 .place__card-title {
   margin-top: 43px;
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
 }
 
 .place__card-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
@@ -303,11 +424,11 @@ a {
 .place__card-link {
   display: block;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #8D8D8D;
+  color: #8d8d8d;
   background-color: rgba(141, 141, 141, 0.1);
   width: 195px;
   height: 50px;
@@ -318,17 +439,33 @@ a {
 
 .place__more {
   background-color: transparent;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  border: 2px solid #E76F51;
-  color: #E76F51;
+  border: 2px solid #e76f51;
+  color: #e76f51;
   width: 195px;
   height: 50px;
   line-height: 50px;
   border-radius: 30px;
   margin-top: 40px;
+}
+
+@media (min-width: 1024px) {
+  .place__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow-x: hidden;
+    width: 85%;
+    margin: 0 auto;
+  }
 }
 
 .contact {
@@ -362,14 +499,14 @@ a {
 
 .contact__title {
   margin-top: 40px;
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 53px;
 }
 
 .contact__text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 28px;
@@ -394,28 +531,28 @@ a {
 }
 
 .contact__message ::-webkit-input-placeholder {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 28px;
 }
 
 .contact__message :-ms-input-placeholder {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 28px;
 }
 
 .contact__message ::-ms-input-placeholder {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 28px;
 }
 
 .contact__message ::placeholder {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 28px;
@@ -425,7 +562,7 @@ a {
   position: absolute;
   top: 0;
   right: 5px;
-  background-color: #E76F51;
+  background-color: #e76f51;
   border: none;
   border-radius: 16px;
   width: 50px;
@@ -442,8 +579,8 @@ a {
 
 .footer {
   margin-top: 100px;
-  color: #3B3735;
-  background-color: #F8E1DB;
+  color: #3b3735;
+  background-color: #f8e1db;
   border-radius: 100px 100px 0 0;
 }
 
@@ -463,12 +600,12 @@ a {
 }
 
 .footer__btn-link {
-  color: #E76F51;
+  color: #e76f51;
 }
 
 .footer__title {
   margin-top: 100px;
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
@@ -476,7 +613,7 @@ a {
 
 .footer__text {
   margin-top: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
@@ -505,7 +642,7 @@ a {
 }
 
 .footer__down-title {
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
@@ -517,7 +654,7 @@ a {
 }
 
 .footer__down-link {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
@@ -530,7 +667,7 @@ a {
 .footer__copy {
   padding: 40px 0;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;

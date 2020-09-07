@@ -1,11 +1,10 @@
 body {
-  background-color: #FAF4F2;
+  background-color: #faf4f2;
 }
 
 :focus {
   outline: none;
 }
-
 
 .container {
   margin: 0 20px;
@@ -17,26 +16,25 @@ a {
 }
 
 .header {
-  background-image: url('../image/header.png');
+  background-image: url("../image/header.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
   border-radius: 0 0 97px 97px;
 
-  &__top {
+  &__main {
     padding: 40px 20px 0;
     display: flex;
     justify-content: space-between;
   }
 
-  @media(min-width: 640px) {
+  @media (min-width: 640px) {
     .header {
       &__top {
         padding: 40px 40px 0;
       }
     }
-
   }
 
   &__burger {
@@ -52,15 +50,15 @@ a {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: #E76F51;
+      background-color: #e76f51;
       width: 20px;
       height: 2px;
 
       &::before,
       &::after {
-        content: '';
+        content: "";
         position: absolute;
-        background-color: #E76F51;
+        background-color: #e76f51;
         width: 20px;
         height: 2px;
       }
@@ -77,28 +75,27 @@ a {
 
   &__title {
     margin-top: 200px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 900;
     color: #ffffff;
     text-align: center;
     font-size: 45px;
     line-height: 61px;
     text-transform: uppercase;
-
   }
 
   &__text {
     margin: 20px;
     color: #ffffff;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     padding-bottom: 20px;
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     .header {
 
       &__title,
@@ -127,11 +124,11 @@ a {
     display: block;
     width: 205px;
     height: 50px;
-    background-color: #E76F51;
+    background-color: #e76f51;
     text-align: center;
     color: #ffffff;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 18px;
     text-decoration: none;
@@ -139,7 +136,132 @@ a {
     border-radius: 105px;
     line-height: 50px;
   }
+
+  &__login {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
 }
+
+@media (min-width: 1024px) {
+  .header {
+
+    .menu {
+      display: block;
+      min-width: 700px;
+      padding-left: 10px;
+      padding-top: 10px;
+
+      &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+      }
+
+      &__link {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 28px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 40%;
+          transform: translateX(-50%);
+          transform: rotate(45deg);
+          transform-origin: 0 0;
+          width: 30px;
+          height: 3px;
+          background-color: #e76f51;
+          border-radius: 10px;
+          z-index: -1;
+          opacity: 0;
+          transition: all .3s ease;
+        }
+      }
+
+      &__link:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__burger {
+      display: none;
+    }
+
+    &__login {
+      display: block;
+
+      &-btn {
+        display: block;
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        width: 100px;
+        margin-top: 8px;
+        text-align: center;
+        opacity: 0;
+
+        &:last-child {
+          border: 1px solid #fff;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 15px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1100px) {
+  .header {
+    &__login {
+
+      &-container {
+        display: flex;
+        margin-top: 35px;
+        align-items: center;
+      }
+
+      &-btn {
+        opacity: 1;
+      }
+
+    }
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .header__top {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
+
+
+
 
 .card {
   margin-bottom: 0;
@@ -164,9 +286,8 @@ a {
     padding: 60px 30px;
   }
 
-
   &__title {
-    font-family: 'Archivo', sans-serif;
+    font-family: "Archivo", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 28px;
@@ -174,7 +295,7 @@ a {
   }
 
   &__text {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
@@ -189,7 +310,7 @@ a {
   position: relative;
 
   &::after {
-    content: url('../image/place-shape.png');
+    content: url("../image/place-shape.png");
     position: absolute;
     bottom: 50px;
     left: -70px;
@@ -197,7 +318,7 @@ a {
   }
 
   &::before {
-    content: url('../image/place-shape2.png');
+    content: url("../image/place-shape2.png");
     position: absolute;
     top: 0;
     right: -50px;
@@ -205,20 +326,18 @@ a {
   }
 
   &__title {
-    font-family: 'Archivo', sans-serif;
+    font-family: "Archivo", sans-serif;
     font-weight: 700;
     font-size: 30px;
     line-height: 40px;
     margin-top: 30px;
   }
 
-
   &__container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     overflow-x: hidden;
-
   }
 
   &__inner {
@@ -253,7 +372,7 @@ a {
       bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
-      color: #E76F51;
+      color: #e76f51;
       background-color: #fff;
       width: 140px;
       height: 50px;
@@ -271,27 +390,31 @@ a {
       text-align: center;
       line-height: 40px;
       border-radius: 14px;
-      color: #E76F51;
+      color: #e76f51;
       font-size: 23px;
 
       .fas {
-        // display: none;
+        opacity: 0;
         transform: translateY(-39px);
+        transition: all .2s ease-in-out;
+      }
+
+      .fas.like {
+        opacity: 1;
       }
     }
   }
 
-
   &__card-title {
     margin-top: 43px;
-    font-family: 'Archivo', sans-serif;
+    font-family: "Archivo", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 28px;
   }
 
   &__card-text {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
@@ -301,12 +424,12 @@ a {
   &__card-link {
     display: block;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
-    color: #8D8D8D;
-    background-color: rgba(141, 141, 141, .1);
+    color: #8d8d8d;
+    background-color: rgba(141, 141, 141, 0.1);
     width: 195px;
     height: 50px;
     margin: 0 auto;
@@ -316,12 +439,12 @@ a {
 
   &__more {
     background-color: transparent;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
-    border: 2px solid #E76F51;
-    color: #E76F51;
+    border: 2px solid #e76f51;
+    color: #e76f51;
     width: 195px;
     height: 50px;
     line-height: 50px;
@@ -331,6 +454,24 @@ a {
 }
 
 
+
+@media(min-width: 1024px) {
+.place {
+
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+}
+
+
+}
 .contact {
   margin-top: 102px;
   background-color: #f8e2dd;
@@ -341,7 +482,7 @@ a {
   overflow: hidden;
 
   &::before {
-    content: url('../image/contact-bg.png');
+    content: url("../image/contact-bg.png");
     position: absolute;
     top: 40px;
     left: 0;
@@ -359,16 +500,17 @@ a {
     }
   }
 
+
   &__title {
     margin-top: 40px;
-    font-family: 'Archivo', sans-serif;
+    font-family: "Archivo", sans-serif;
     font-weight: 700;
     font-size: 40px;
     line-height: 53px;
   }
 
   &__text {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 28px;
@@ -381,11 +523,10 @@ a {
     border-radius: 20px;
     position: relative;
 
-
     input {
       width: calc(100% - 30px);
       border: none;
-      background-color: rgba(255, 255, 255, .8);
+      background-color: rgba(255, 255, 255, 0.8);
       height: 80px;
       border-radius: 20px;
       padding-left: 30px;
@@ -393,7 +534,7 @@ a {
     }
 
     ::placeholder {
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 400;
       font-size: 14px;
       line-height: 28px;
@@ -403,7 +544,7 @@ a {
       position: absolute;
       top: 0;
       right: 5px;
-      background-color: #E76F51;
+      background-color: #e76f51;
       border: none;
       border-radius: 16px;
       width: 50px;
@@ -422,8 +563,8 @@ a {
 
 .footer {
   margin-top: 100px;
-  color: #3B3735;
-  background-color: #F8E1DB;
+  color: #3b3735;
+  background-color: #f8e1db;
   border-radius: 100px 100px 0 0;
 
   &__btn {
@@ -441,12 +582,12 @@ a {
   }
 
   &__btn-link {
-    color: #E76F51;
+    color: #e76f51;
   }
 
   &__title {
     margin-top: 100px;
-    font-family: 'Archivo', sans-serif;
+    font-family: "Archivo", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 28px;
@@ -454,7 +595,7 @@ a {
 
   &__text {
     margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
@@ -477,7 +618,7 @@ a {
   }
 
   &__down-title {
-    font-family: 'Archivo', sans-serif;
+    font-family: "Archivo", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 28px;
@@ -489,7 +630,7 @@ a {
   }
 
   &__down-link {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
@@ -502,16 +643,15 @@ a {
   &__copy {
     padding: 40px 0;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
   }
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .footer {
-
     &__contact {
       justify-content: space-around;
     }
