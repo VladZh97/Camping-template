@@ -82,7 +82,7 @@ a {
 }
 
 .header__text {
-  margin-top: 20px;
+  margin: 20px;
   color: #ffffff;
   text-align: center;
   font-family: 'Roboto', sans-serif;
@@ -205,14 +205,15 @@ a {
 
 .place__inner {
   margin: 30px 20px;
-  max-width: 280px;
+  min-width: 280px;
+  max-width: 300px;
   min-height: 465px;
   background-color: #fff;
   border-radius: 20px;
 }
 
 .place__card {
-  margin: 0 30px;
+  margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 20px;
 }
@@ -223,6 +224,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  margin: 0 15px;
 }
 
 .place__img img {
@@ -231,7 +233,7 @@ a {
 
 .place__img-price {
   position: absolute;
-  bottom: 10px;
+  bottom: -10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -276,8 +278,7 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
-  margin-top: 10px;
-  margin-bottom: 25px;
+  margin: 10px 15px 25px;
 }
 
 .place__card-link {
@@ -330,8 +331,9 @@ a {
 
 .contact__img {
   padding-top: 40px;
-  width: 342px;
+  max-width: 342px;
   height: auto;
+  margin: 0 auto;
 }
 
 .contact__img img {
@@ -505,5 +507,9 @@ a {
 .footer__copy {
   padding: 40px 0;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
 }
 /*# sourceMappingURL=style.css.map */

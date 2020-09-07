@@ -78,7 +78,7 @@ a {
   }
 
   &__text {
-    margin-top: 20px;
+    margin: 20px;
     color: #ffffff;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -197,14 +197,15 @@ a {
 
   &__inner {
     margin: 30px 20px;
-    max-width: 280px;
+    min-width: 280px;
+    max-width: 300px;
     min-height: 465px;
     background-color: #fff;
     border-radius: 20px;
   }
 
   &__card {
-    margin: 0 30px;
+    margin: 0 auto;
     padding-top: 30px;
     padding-bottom: 20px;
   }
@@ -215,6 +216,7 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    margin: 0 15px;
 
     img {
       width: 100%;
@@ -222,7 +224,7 @@ a {
 
     &-price {
       position: absolute;
-      bottom: 10px;
+      bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
       color: #E76F51;
@@ -267,8 +269,7 @@ a {
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    margin: 10px 15px 25px;
   }
 
   &__card-link {
@@ -322,8 +323,9 @@ a {
 
   &__img {
     padding-top: 40px;
-    width: 342px;
+    max-width: 342px;
     height: auto;
+    margin: 0 auto;
 
     img {
       width: 100%;
@@ -470,5 +472,9 @@ a {
   &__copy {
     padding: 40px 0;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
   }
 }
