@@ -22,6 +22,7 @@ a {
   background-size: cover;
   width: 100%;
   border-radius: 0 0 97px 97px;
+  position: relative;
 }
 
 .header__main {
@@ -32,6 +33,10 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.header__logo {
+  z-index: 1;
 }
 
 @media (min-width: 640px) {
@@ -47,6 +52,7 @@ a {
   padding: 20px 14px;
   border-radius: 20px;
   position: relative;
+  cursor: pointer;
 }
 
 .header__burger span {
@@ -77,7 +83,7 @@ a {
 }
 
 .header__title {
-  margin-top: 200px;
+  margin: 200px auto 0 auto;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   color: #ffffff;
@@ -85,6 +91,8 @@ a {
   font-size: 45px;
   line-height: 61px;
   text-transform: uppercase;
+  min-height: 130px;
+  max-width: 90%;
 }
 
 .header__text {
@@ -100,7 +108,7 @@ a {
 
 @media (min-width: 768px) {
   .header .header__title, .header .header__text {
-    max-width: 500px;
+    max-width: 370px;
     margin: 20px auto 0;
   }
   .header .header__title {
@@ -140,20 +148,79 @@ a {
 }
 
 .header .menu {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  background-color: #ebd8d4;
+  width: 100%;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.header .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.header .menu__item {
+  padding-top: 8px;
+}
+
+.header .menu__link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.header .menu__link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 100%;
+  height: 13px;
+  background-color: #e76f51;
+  z-index: -1;
+  border-radius: 20px;
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
 }
 
 @media (min-width: 1024px) {
   .header .menu {
+    position: static;
     display: block;
     min-width: 700px;
     padding-left: 10px;
-    padding-top: 10px;
+    margin-top: -10px;
+    height: auto;
+    background-color: transparent;
   }
   .header .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -webkit-box-align: center;
@@ -168,6 +235,9 @@ a {
     color: #fff;
     position: relative;
     z-index: 1;
+  }
+  .header .menu__link::after {
+    display: none;
   }
   .header .menu__link::before {
     content: '';
@@ -279,6 +349,17 @@ a {
   border-radius: 20px;
   background-color: #fff;
   margin: 0 auto 20px auto;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+  -webkit-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
+}
+
+.card__inner.anim {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .card__body {
@@ -352,6 +433,17 @@ a {
   min-height: 465px;
   background-color: #fff;
   border-radius: 20px;
+  opacity: 0;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  -webkit-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
+}
+
+.place__inner.anim {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .place__card {
@@ -677,7 +769,7 @@ a {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   padding-right: 20px;
-  width: 50%;
+  width: 70%;
 }
 
 .footer__info:first-child {
@@ -720,17 +812,17 @@ a {
   .footer__contact {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    width: auto;
+    margin: 0 auto;
+    text-align: left;
   }
   .footer__info {
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    padding-right: 0;
     width: auto;
   }
   .footer__text {
     max-width: 70%;
   }
-  .footer__down-title {
+  .footer__app .footer__down-title {
     text-align: center;
   }
   .footer__app-container {
